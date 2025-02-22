@@ -17,7 +17,7 @@ jobs:
 
       - name: Execute Notebook
         run: |
-          papermill your_notebook.ipynb output.ipynb
+          papermill nifty_50_data_extract.ipynb output.ipynb
 
       - name: Commit and Push Changes
         run: |
