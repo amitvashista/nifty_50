@@ -37,9 +37,10 @@ jobs:
       #     git status  # Check if files are added
       - name: Push changes
         run: |
-          git add NiftyOptionCE.xlsx
-          git add NiftyOptionPE.xlsx
-          git add Nifty.xlsx
+          git add -A
+          # git add NiftyOptionCE.xlsx
+          # git add NiftyOptionPE.xlsx
+          # git add Nifty.xlsx
           git commit -m "Updated XLSX files"
           git push origin main
 
