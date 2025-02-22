@@ -5,8 +5,8 @@
 #    - cron: "35 18 * * *"  # Runs at 18:30 UTC
 name: "Close stale issues"
 on:
-  schedule:
-  - cron: "40 18 * * *"
+ 
+  workflow_dispatch:  # Enables manual trigger from GitHub UI
 # on:
 #   workflow_dispatch:  # Enables manual trigger from GitHub UI
 
