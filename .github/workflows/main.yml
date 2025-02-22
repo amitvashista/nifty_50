@@ -25,12 +25,16 @@ jobs:
         run: git remote set-url origin https://amitvashista:${{ secrets.GH_PAT }}@github.com/amitvashista/nifty_50.git
 
 
-      - name: Commit and Push CSV File
+      - name: Push changes
         run: |
-          git config --global user.email "amitvashistha1997@gmail.com"
-          git config --global user.name "amitvashista"
-          git add NiftyOptionCE.xlsx
-          git add NiftyOptionPE.xlsx
-          git add Nifty.xlsx
-          git commit -m "Updated CSV file"
-          git push
+          git push origin main
+
+      # - name: Commit and Push CSV File
+      #   run: |
+      #     git config --global user.email "amitvashistha1997@gmail.com"
+      #     git config --global user.name "amitvashista"
+      #     git add NiftyOptionCE.xlsx
+      #     git add NiftyOptionPE.xlsx
+      #     git add Nifty.xlsx
+      #     git commit -m "Updated CSV file"
+      #     git push
