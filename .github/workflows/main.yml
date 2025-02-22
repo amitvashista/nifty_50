@@ -1,0 +1,28 @@
+name: Run Colab Notebook Daily
+
+on:
+  schedule:
+   - cron: "45 13 * * *"  # Runs at 5 AM UTC (change if needed)
+
+jobs:
+  execute-notebook:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: pip install papermill jupyter nbconvert
+
+      - name: Execute Notebook
+        run: |
+          papermill your_notebook.ipynb output.ipynb
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions@github.com"
+          git add output.ipynb
+          git commit -m "Updated notebook execution"
+          git push
