@@ -23,7 +23,7 @@ jobs:
 
       - name: Execute Notebook
         run: |
-          papermill nifty_50_data_extract.ipynb output.ipynb
+          papermill updated_nifty_50.ipynb output.ipynb
       - name: Set up Git Authentication
         run: |
           git config --global user.email "amitvashistha1997@gmail.com"
