@@ -1,8 +1,11 @@
 name: Run Colab Notebook Daily
 
+# on:
+#   schedule:
+#    - cron: "5 14 * * *"  # Runs at 5 AM UTC (change if needed)
+
 on:
-  schedule:
-   - cron: "5 14 * * *"  # Runs at 5 AM UTC (change if needed)
+  workflow_dispatch:  # Enables manual trigger from GitHub UI
 
 jobs:
   execute-notebook:
