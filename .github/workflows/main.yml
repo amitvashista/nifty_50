@@ -26,6 +26,8 @@ jobs:
         run: |
           git config --global user.email "amitvashistha1997@gmail.com"
           git config --global user.name "amitvashista"
-          git add output.csv
+          git add NiftyOptionCE.xlsx
+          git add NiftyOptionPE.xlsx
+          git add Nifty.xlsx
           git commit -m "Updated CSV file"
           git push
