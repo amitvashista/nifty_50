@@ -33,11 +33,14 @@ jobs:
       
       - name: Push changes
         run: |
-          # git add NiftyOptionCE.xlsx
-          # git add NiftyOptionPE.xlsx
-          # git add Nifty.xlsx
-          git commit -m "Updated XLSX files"
-          git push origin main
+          git add -A  # Add all files, including untracked ones
+          git status  # Check if files are added
+        # run: |
+        #   # git add NiftyOptionCE.xlsx
+        #   # git add NiftyOptionPE.xlsx
+        #   # git add Nifty.xlsx
+        #   git commit -m "Updated XLSX files"
+        #   git push origin main
 
 
 
