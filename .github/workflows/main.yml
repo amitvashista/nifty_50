@@ -1,9 +1,12 @@
-name: Run Colab Notebook Daily
+# name: Run Colab Notebook Daily
 
+# on:
+#   schedule:
+#    - cron: "35 18 * * *"  # Runs at 18:30 UTC
+name: "Close stale issues"
 on:
   schedule:
-   - cron: "35 18 * * *"  # Runs at 18:30 UTC
-
+  - cron: "40 18 * * *"
 # on:
 #   workflow_dispatch:  # Enables manual trigger from GitHub UI
 
