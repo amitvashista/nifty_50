@@ -21,6 +21,9 @@ jobs:
       - name: Execute Notebook
         run: |
           papermill nifty_50_data_extract.ipynb output.ipynb
+      - name: Set up Git Authentication
+        run: git remote set-url origin https://amitvashista:${{ secrets.GH_PAT }}@github.com/amitvashista/nifty_50.git
+
 
       - name: Commit and Push CSV File
         run: |
